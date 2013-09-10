@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/carbon_fibre_repeating"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <TabHost
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:id="@+id/tabHost">
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+            <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+            </TabWidget>
+            <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                <LinearLayout
+                        android:id="@+id/categories_tab"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                    <TableLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" android:layout_gravity="center">
+                        <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:layout_weight="1">
+                            <ToggleButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Fastfood"
+                                    android:id="@+id/fastFoodButton" android:layout_weight="1" android:textOff="Fastfood"
+                                    android:textOn="Fastfood"/>
+                            <ToggleButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Film"
+                                    android:id="@+id/filmButton" android:layout_weight="1" android:textOff="Film"
+                                    android:textOn="Film"/>
+                        </TableRow>
+                        <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" android:layout_weight="1">
+                            <ToggleButton
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:text="Electronics"
+                                    android:id="@+id/electronicsButton" android:layout_weight="1" android:textOff="Electronics"
+                                    android:textOn="Electronics"/>
+                            <ToggleButton
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:text="Wellness"
+                                    android:id="@+id/wellnessButton" android:layout_weight="1" android:textOff="Wellness"
+                                    android:textOn="Wellness"/>
+                        </TableRow>
+                        <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" android:layout_weight="1">
+                            <ToggleButton
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:text="Dining"
+                                    android:id="@+id/diningButton" android:layout_weight="1" android:textOn="Dining"
+                                    android:textOff="Dining"/>
+                            <ToggleButton
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:text="Events"
+                                    android:id="@+id/eventsButton" android:layout_weight="1" android:textOff="Events"
+                                    android:textOn="Events"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+                <LinearLayout
+                        android:id="@+id/coupons_tab"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+                    <TextView
+                            android:id="@+id/textview"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Fill in to add a coupon on your current location"/>
+                    <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Message..."
+                            android:id="@+id/message" android:lines="5" android:textAlignment="textStart"/>
+                    <Spinner
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cat" android:entries="@array/categories"/>
+                    <Button
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Create Coupon"
+                            android:id="@+id/createButton" android:onClick="createCoupon"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>
+
