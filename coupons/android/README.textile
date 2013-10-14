@@ -5,7 +5,7 @@ From the project root:
 <pre><code>android create project \
   --target "Google Inc.:Google APIs:18" \
   --name "PlotCouponExample" \
-  --path ./plot-examples/voucher/android \
+  --path ./plot-examples/coupons/android \
   --package com.plotprojects.coupons \
   --activity MainActivity
 </code></pre>
